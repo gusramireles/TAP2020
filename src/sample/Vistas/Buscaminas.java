@@ -12,6 +12,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import sample.Eventos.EventoBuscaminas;
 
 public class Buscaminas extends Stage implements EventHandler {
     private Label _lblNoRows, _lblNoCols;
@@ -44,7 +45,8 @@ public class Buscaminas extends Stage implements EventHandler {
         _txtNoCols = new TextField();
         _txtNoCols.setMaxWidth(50);
         _btnMinar = new Button("Minar Campo");
-        _btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, this);
+        //_btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, this);
+        _btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventoBuscaminas());
 
         hbox.getChildren().addAll(_lblNoRows, _txtNoRows, _lblNoCols, _txtNoCols, _btnMinar);
         vbox.getChildren().addAll(hbox);
