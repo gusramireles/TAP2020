@@ -21,8 +21,11 @@ public class Main extends Application {
         _mnCompetencia2 = new Menu("Competencia 2");
         _mnSalir = new Menu("Salir");
 
-        _mitPractica1 = new MenuItem("Practica 1");
+        _mitPractica1 = new MenuItem("Buscaminas");
+        _mitPractica1.setOnAction(event -> OpcionMenu(1));
+
         _mitExit = new MenuItem("Bye");
+        _mitExit.setOnAction(event -> OpcionMenu(99));
 
         _mnCompetencia1.getItems().addAll(_mitPractica1);
         _mnSalir.getItems().addAll(_mitExit);
@@ -34,8 +37,17 @@ public class Main extends Application {
         primaryStage.setTitle("Tópicos Avanzados de Programación 2020 :v");
         primaryStage.setScene(new Scene(_mnbPrincipal, 300, 275));
         primaryStage.show();
+    }
 
-        new Buscaminas();
+    private void OpcionMenu(int i) {
+        switch (i){
+            case 1:
+                new Buscaminas();
+                break;
+            case 99:
+                System.exit(0);
+                break;
+        }
     }
 
 
