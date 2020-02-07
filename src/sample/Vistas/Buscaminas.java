@@ -14,7 +14,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import sample.Eventos.EventoBuscaminas;
 
-public class Buscaminas extends Stage implements EventHandler {
+public class Buscaminas extends Stage {
     private Label _lblNoRows, _lblNoCols;
     private TextField _txtNoRows, _txtNoCols;
     private Button _btnMinar;
@@ -46,7 +46,7 @@ public class Buscaminas extends Stage implements EventHandler {
         _txtNoCols.setMaxWidth(50);
         _btnMinar = new Button("Minar Campo");
         //_btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, this);
-        //_btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventoBuscaminas());
+        _btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventoBuscaminas());
         /*_btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -57,7 +57,7 @@ public class Buscaminas extends Stage implements EventHandler {
 
         //_btnMinar.setOnAction(event -> { System.out.println("Mi cuarto evento ;)"); });
 
-        _btnMinar.setOnAction(event -> Evento());
+        //_btnMinar.setOnAction(event -> Evento());
 
         hbox.getChildren().addAll(_lblNoRows, _txtNoRows, _lblNoCols, _txtNoCols, _btnMinar);
         vbox.getChildren().addAll(hbox);
@@ -65,12 +65,8 @@ public class Buscaminas extends Stage implements EventHandler {
         _scnEscena = new Scene(vbox, 480, 480);
     }
 
-    private void Evento() {
+    /*private void Evento() {
         System.out.println("Mi quinto evento :O");
     }
-
-    @Override
-    public void handle(Event event) {
-        System.out.println("Mi primer evento :v");
-    }
+     */
 }
