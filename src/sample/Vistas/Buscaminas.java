@@ -46,12 +46,27 @@ public class Buscaminas extends Stage implements EventHandler {
         _txtNoCols.setMaxWidth(50);
         _btnMinar = new Button("Minar Campo");
         //_btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, this);
-        _btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventoBuscaminas());
+        //_btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventoBuscaminas());
+        /*_btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                System.out.println("Mi tercer evento :(");
+            }
+        });
+         */
+
+        //_btnMinar.setOnAction(event -> { System.out.println("Mi cuarto evento ;)"); });
+
+        _btnMinar.setOnAction(event -> Evento());
 
         hbox.getChildren().addAll(_lblNoRows, _txtNoRows, _lblNoCols, _txtNoCols, _btnMinar);
         vbox.getChildren().addAll(hbox);
 
         _scnEscena = new Scene(vbox, 480, 480);
+    }
+
+    private void Evento() {
+        System.out.println("Mi quinto evento :O");
     }
 
     @Override
