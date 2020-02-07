@@ -21,5 +21,8 @@ public class EventoBuscaminas implements EventHandler {
 
     @Override
     public void handle(Event event) {
+        int _nr = Integer.parseInt(_txtNoRows.getText());
+        int _nc = Integer.parseInt(_txtNoCols.getText());
+        _arrBtnCeldas = new Button[_nr][_nc];
     }
 }

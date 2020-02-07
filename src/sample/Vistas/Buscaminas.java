@@ -46,7 +46,7 @@ public class Buscaminas extends Stage {
         _txtNoCols.setMaxWidth(50);
         _btnMinar = new Button("Minar Campo");
         //_btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, this);
-        _btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventoBuscaminas());
+        _btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventoBuscaminas(_txtNoRows, _txtNoCols));
         /*_btnMinar.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
